@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+   <div class="container h-100">
+        <div class="row h-100 page-header justify-content-center align-items-center">
+            <h1>用户注册</h1>
+        </div>
+        <div class="row h-100 justify-content-center align-items-center">
+            {{ render_form(form, extra_classes='col-6') }}
+        </div>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;
+            <small>已有账号? <a href="{{ url_for('.login') }}">点击登陆</a>
+            </small>
+    </div>
+
+{% endblock %}

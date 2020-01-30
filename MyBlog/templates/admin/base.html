@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% from 'bootstrap/nav.html' import render_nav_item %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>账号设置</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="nav nav-pills flex-column" role="tablist" aria-orientation="vertical">
+                {{ render_nav_item('admin.change_password', '密码更改') }}
+                {{ render_nav_item('admin.delete_account', '删除此账号') }}
+            </div>
+        </div>
+        <div class="col-md-9">
+            {% block setting_content %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}
